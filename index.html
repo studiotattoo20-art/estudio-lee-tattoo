@@ -1,192 +1,166 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Estúdio Lee Tattoo</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Stúdio Lee Tattoo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* { margin:0; padding:0; box-sizing:border-box; }
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background:#0e0e0e;
-  color:#f2f2f2;
-  scroll-behavior:smooth;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
 
-/* MENU */
-nav {
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#000;
-  padding:15px 30px;
-  z-index:1000;
-}
-nav ul {
-  list-style:none;
-  display:flex;
-  justify-content:center;
-  gap:30px;
-}
-nav a {
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  letter-spacing:1px;
-}
-nav a:hover { color:#b3003c; }
+    body {
+      background-color: #0e0e0e;
+      color: #f2f2f2;
+    }
 
-/* SEÇÕES */
-section {
-  padding:100px 20px;
-  max-width:1100px;
-  margin:auto;
-}
+    header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url('https://images.unsplash.com/photo-1520975916090-3105956dac38');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
-/* CAPA */
-#inicio {
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.9));
-}
-#inicio h1 { font-size:3rem; }
-#inicio p {
-  color:#b3003c;
-  margin:20px 0 40px;
-  letter-spacing:1px;
-}
-.btns a {
-  border:2px solid #b3003c;
-  padding:15px 30px;
-  color:#fff;
-  text-decoration:none;
-  margin:10px;
-  display:inline-block;
-}
-.btns a:hover { background:#b3003c; }
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 3px;
+    }
 
-/* TITULOS */
-h2 {
-  text-align:center;
-  margin-bottom:40px;
-  color:#b3003c;
-  letter-spacing:2px;
-}
+    header p {
+      margin: 15px 0;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
 
-/* GALERIA */
-.galeria {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-.galeria img {
-  width:100%;
-  border:2px solid #111;
-}
+    .btn {
+      margin-top: 20px;
+      padding: 15px 30px;
+      background-color: #b30000;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
 
-/* SOBRE */
-#sobre p {
-  text-align:center;
-  line-height:1.6;
-}
+    .btn:hover {
+      background-color: #ff1a1a;
+    }
 
-/* CONTATO */
-#contato {
-  text-align:center;
-}
-#contato a {
-  color:#b3003c;
-  font-size:1.2rem;
-  text-decoration:none;
-}
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.9);
+      padding: 10px 0;
+      text-align: center;
+      z-index: 999;
+    }
 
-/* BOTÃO WHATSAPP */
-.whatsapp {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:#fff;
-  padding:15px 20px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
-  box-shadow:0 0 10px rgba(0,0,0,.5);
-}
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-/* FOOTER */
-footer {
-  background:#000;
-  padding:20px;
-  text-align:center;
-  color:#777;
-}
-</style>
+    section {
+      padding: 80px 10%;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      border-left: 5px solid #b30000;
+      padding-left: 10px;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .box {
+      background: #1a1a1a;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <ul>
-    <li><a href="#inicio">Início</a></li>
-    <li><a href="#portfolio">Portfólio</a></li>
-    <li><a href="#sobre">Sobre</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-</nav>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#trabalhos">Trabalhos</a>
+    <a href="#contato">Agendamento</a>
+  </nav>
 
-<section id="inicio">
-  <div>
-    <h1>Estúdio Lee Tattoo</h1>
-    <p>Tattoo tradicional • autoral • identidade própria</p>
-    <div class="btns">
-      <a href="https://wa.me/5500000000000" target="_blank">WhatsApp</a>
-      <a href="https://instagram.com/" target="_blank">Instagram</a>
+  <header id="inicio">
+    <h1>STÚDIO LEE TATTOO</h1>
+    <p>Arte na pele • Identidade • Estilo</p>
+    <a class="btn" href="https://wa.me/5599999999999" target="_blank">
+      Agendar pelo WhatsApp
+    </a>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre o Estúdio</h2>
+    <p>
+      O Stúdio Lee Tattoo é um espaço dedicado à arte, identidade e expressão.
+      Cada tatuagem é criada com personalidade, técnica e respeito à história
+      de cada cliente.
+    </p>
+  </section>
+
+  <section id="trabalhos">
+    <h2>Trabalhos</h2>
+    <div class="galeria">
+      <div class="box">Foto 1</div>
+      <div class="box">Foto 2</div>
+      <div class="box">Foto 3</div>
+      <div class="box">Foto 4</div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="portfolio">
-  <h2>Portfólio</h2>
-  <div class="galeria">
-    <img src="https://via.placeholder.com/400x400?text=Tattoo+1">
-    <img src="https://via.placeholder.com/400x400?text=Tattoo+2">
-    <img src="https://via.placeholder.com/400x400?text=Tattoo+3">
-    <img src="https://via.placeholder.com/400x400?text=Tattoo+4">
-  </div>
-</section>
+  <section id="contato">
+    <h2>Agendamento</h2>
+    <p>
+      Atendimento com hora marcada.<br>
+      Clique no botão abaixo e fale direto comigo no WhatsApp.
+    </p>
+    <br>
+    <a class="btn" href="https://wa.me/5599999999999" target="_blank">
+      Falar no WhatsApp
+    </a>
+  </section>
 
-<section id="sobre">
-  <h2>Sobre o Estúdio</h2>
-  <p>
-    O Estúdio Lee Tattoo é focado em tatuagem tradicional e autoral,
-    com traço forte, identidade própria e arte feita sob medida.
-    Cada trabalho carrega conceito, respeito e personalidade.
-  </p>
-</section>
-
-<section id="contato">
-  <h2>Contato</h2>
-  <p>Agendamentos e orçamentos:</p>
-  <p>
-    <a href="https://wa.me/5500000000000" target="_blank">WhatsApp</a> |
-    <a href="https://instagram.com/" target="_blank">Instagram</a>
-  </p>
-</section>
-
-<footer>
-© 2026 • Estúdio Lee Tattoo
-</footer>
-
-<a class="whatsapp" href="https://wa.me/5500000000000" target="_blank">
-WhatsApp
-</a>
+  <footer>
+    © 2026 • Stúdio Lee Tattoo • Todos os direitos reservados
+  </footer>
 
 </body>
 </html>
-https://wa.me/5551984436413
-https://instagram.com/
