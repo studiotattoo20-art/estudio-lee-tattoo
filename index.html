@@ -29,18 +29,19 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(0,0,0,0.9);
-      padding: 12px 0;
+      background: rgba(0,0,0,0.92);
+      padding: 14px 0;
       text-align: center;
-      z-index: 999;
+      z-index: 1000;
       backdrop-filter: blur(6px);
     }
 
     nav a {
-      color: white;
-      margin: 0 15px;
+      color: #fff;
+      margin: 0 18px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
 
     nav a:hover {
@@ -49,8 +50,9 @@
 
     header {
       height: 100vh;
-      background: linear-gradient(rgba(14,14,14,0.85), rgba(14,14,14,0.85)),
-      url("https://images.unsplash.com/photo-1609943240517-8c45f4c0f56c?auto=format&fit=crop&w=1600&q=70");
+      background:
+        linear-gradient(rgba(14,14,14,0.85), rgba(14,14,14,0.85)),
+        url("img/hero.jpg");
       background-size: cover;
       background-position: center;
       display: flex;
@@ -63,27 +65,27 @@
 
     header h1 {
       font-family: 'Cinzel', serif;
-      font-size: 3rem;
+      font-size: 3.2rem;
       letter-spacing: 4px;
       color: #c9a24d;
     }
 
     header p {
-      margin: 20px 0;
-      font-size: 1.3rem;
+      margin: 22px 0;
+      font-size: 1.2rem;
       color: #d0d0d0;
       max-width: 700px;
     }
 
     .btn {
-      margin-top: 20px;
-      padding: 15px 30px;
+      margin-top: 25px;
+      padding: 15px 36px;
       background-color: #7a0c0c;
-      color: white;
+      color: #fff;
       text-decoration: none;
       font-weight: bold;
       border-radius: 6px;
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
 
     .btn:hover {
@@ -91,28 +93,29 @@
     }
 
     section {
-      padding: 80px 10%;
+      padding: 90px 10%;
     }
 
     h2 {
       font-family: 'Cinzel', serif;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       border-left: 5px solid #c9a24d;
-      padding-left: 10px;
+      padding-left: 12px;
+      color: #f0f0f0;
     }
 
     .galeria {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 24px;
     }
 
     .galeria img {
       width: 100%;
-      height: 260px;
+      height: 280px;
       object-fit: cover;
-      border-radius: 10px;
-      filter: grayscale(10%);
+      border-radius: 12px;
+      filter: grayscale(15%);
       transition: 0.4s ease;
     }
 
@@ -124,9 +127,15 @@
     footer {
       background: #000;
       text-align: center;
-      padding: 20px;
+      padding: 24px;
       font-size: 0.9rem;
       color: #777;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.4rem;
+      }
     }
   </style>
 </head>
@@ -151,8 +160,8 @@
   <section id="sobre">
     <h2>Sobre o Estúdio</h2>
     <p>
-      O Stúdio Lee Tattoo é um espaço dedicado à arte, identidade e expressão.
-      Cada tatuagem é criada com personalidade, técnica e respeito à história
+      O Stúdio Lee Tattoo é um espaço dedicado à arte autoral, identidade e expressão.
+      Cada trabalho é desenvolvido com técnica, personalidade e respeito à história
       de cada cliente.
     </p>
   </section>
@@ -160,10 +169,10 @@
   <section id="trabalhos">
     <h2>Trabalhos</h2>
     <div class="galeria">
-      <img src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?auto=format&fit=crop&w=600&q=70">
-      <img src="https://images.unsplash.com/photo-1605647540924-b2d07f43f39a?auto=format&fit=crop&w=600&q=70">
-      <img src="https://images.unsplash.com/photo-1585386959984-a41552231693?auto=format&fit=crop&w=600&q=70">
-      <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?auto=format&fit=crop&w=600&q=70">
+      <img src="img/tattoo1.jpg" alt="Tattoo 1">
+      <img src="img/tattoo2.jpg" alt="Tattoo 2">
+      <img src="img/tattoo3.jpg" alt="Tattoo 3">
+      <img src="img/tattoo4.jpg" alt="Tattoo 4">
     </div>
   </section>
 
@@ -185,4 +194,3 @@
 
 </body>
 </html>
-
